@@ -1,0 +1,355 @@
+/* --- GENEL AYARLAR (RESET) --- */
+/* Tüm elementlerin varsayılan boşluklarını sıfırlar */
+* {
+    margin: 0;
+    padding: 0;
+    /* Padding ve border değerlerinin genişliğe dahil edilmesini sağlar */
+    box-sizing: border-box;
+}
+
+/* Footer'ı aşağı sabitlemek için body ayarları */
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #fdf5e6;
+    color: #555;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.konteyner {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #e67e22;
+    padding: 20px 0;
+}
+
+header .konteyner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: block;
+}
+
+.menu a:hover {
+    color: #ffe4c4;
+}
+
+.acilir-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d35400;
+    width: 180px; /* Genişlik artırıldı */
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.acilir-menu-kapsayici:hover .acilir-menu {
+    display: block;
+}
+
+.acilir-menu li {
+    margin: 0;
+    width: 100%;
+}
+
+.acilir-menu a {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.acilir-menu a:hover {
+    background-color: #e67e22;
+}
+
+.hero {
+    background-color: #faebd7;
+    text-align: center;
+    padding: 80px 0;
+    border-bottom: 5px solid #e67e22;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #d35400;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #d35400;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-hero:hover {
+    background-color: #a04000;
+}
+
+.bolum {
+    padding: 50px 0;
+}
+
+.gri-arkaplan {
+    background-color: #f7e7ce;
+}
+
+.bolum-basligi {
+    text-align: center;
+    color: #d35400;
+    margin-bottom: 30px;
+    font-size: 28px;
+    border-bottom: 2px solid #e67e22;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.kart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.kart {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.kart-resim {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    margin-bottom: 15px;
+}
+
+.kart h3 {
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.bilgi-kutusu {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #e67e22;
+}
+
+.bilgi-kutusu ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.form-kutusu {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+.form-satir {
+    margin-bottom: 15px;
+}
+
+.form-satir label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-satir input,
+.form-satir textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.form-satir button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-satir button:hover {
+    background-color: #d35400;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: auto;
+    font-size: 14px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 110px; /* Logo boyutu artırıldı */
+    height: auto;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+.banner-resim {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.tur-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tur-detay {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detay-resim {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.kart-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.kart-gorsel {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.kart-link:hover .kart {
+    background-color: #ffe4c4;
+    border-color: #d35400;
+    cursor: pointer;
+}
+
+.kart-link:hover h3 {
+    color: #d35400;
+}
+
+/* --- YENİ EKLENEN STİLLER --- */
+
+/* Hakkımızda Sayfası Görseli */
+.hakkimizda-resim {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 3px solid #f7e7ce;
+}
+
+/* Kedi Galerisi Izgarası */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeri-resim {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: 0.3s;
+}
+
+.galeri-resim:hover {
+    border-color: #e67e22;
+    opacity: 0.9;
+}
+
+/* Footer Sosyal Medya Bölümü */
+.footer-sosyal {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #555;
+}
+
+.footer-sosyal h3 {
+    color: #e67e22;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-sosyal a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-sosyal a:hover {
+    color: #e67e22;
+}
